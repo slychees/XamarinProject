@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="SignUp3.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#FFFFFF"
+    mc:Ignorable="d">
+
+    <ContentPage Title="Log In">
+        <ScrollView>
+            <StackLayout Padding="21" Spacing="21">
+                <Image Aspect="AspectFit" Source="usermale.png" />
+                <StackLayout Padding="26" Spacing="26">
+                    <Entry x:Name="EntUserName" Placeholder="Username or email address" />
+                    <Entry
+                        x:Name="EntPass"
+                        IsPassword="True"
+                        Placeholder="Password" />
+                    <Frame
+                        Padding="0"
+                        BorderColor="#FFFDFD"
+                        CornerRadius="26"
+                        HasShadow="True">
+                        <Button
+                            x:Name="LoginBtn"
+                            BackgroundColor="#FFFDFD"
+                            Clicked="LoginBtn_Clicked"
+                            CornerRadius="25"
+                            ImageSource="Done.png"
+                            Text="Log in"
+                            TextColor="#000000" />
+                    </Frame>
+                    <Label HorizontalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                
+                                <Span Text="Forgot Password" TextColor="Blue" TextDecorations="Underline"  >
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ClickCommand}" Tapped="TapGestureRecognizer_Tapped" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        
+                    </Label>
+
+                    <Label HorizontalOptions="CenterAndExpand" Text="Login with" />
+                    <StackLayout
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                        Spacing="21">
+                        <Image Source="Facebook.png" />
+                        <Image Source="github.png" />
+                        <Image Source="twitter.png" />
+                        <Image Source="google.png" />
+                    </StackLayout> 
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Sign Up">
+        <StackLayout>
+            <ScrollView>
+                <StackLayout Padding="20" Spacing="20">
+                    <Image Aspect="AspectFit" Source="camera.png" />
+                    <StackLayout Padding="25" Spacing="25">
+                        <Entry x:Name="NewEmail" Placeholder="Email address" />
+                        <Entry x:Name="NewUser" Placeholder="Username" />
+                        <Entry
+                            x:Name="NewPass"
+                            IsPassword="True"
+                            Placeholder="Password" />
+                        <Entry
+                            x:Name="ConfirmPass"
+                            IsPassword="True"
+                            Placeholder="Password" />
+                        <Frame
+                            Padding="0"
+                            BorderColor="#FFFFFF"
+                            CornerRadius="25"
+                            HasShadow="True">
+                            <Button
+                                x:Name="SignUp"
+                                BackgroundColor="#FFFFFF"
+                                Clicked="SignUp_Clicked"
+                                CornerRadius="25"
+                                ImageSource="Done.png"
+                                Text="Sign Up"
+                                TextColor="#000000" />
+                        </Frame>
+                        <Label HorizontalOptions="CenterAndExpand" Text="Terms of Services" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlMobileAppProject.HomPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
+            <Label Text="Mobile Portal for Course Registration" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+        </Frame>
+
+        <StackLayout Padding="1" Spacing="5">
+            <Entry x:Name="SurNameEntry" Placeholder="Surname" />
+            <Entry x:Name="FirstNameEntry" Placeholder="First Name" />
+            <Entry x:Name="MiddleNameEntry" Placeholder="MiddleName" />
+            <Entry x:Name="SIDEntry" Placeholder="SID" />
+        </StackLayout>
+
+        <Picker x:Name="picker1" Title="Select Department" TitleColor="Gray">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Accounting</x:String>
+                    <x:String>Architecture</x:String>
+                    <x:String>Banking and Finance</x:String>
+                    <x:String>Building Technology</x:String>
+                    <x:String>Biochemistry</x:String>
+                    <x:String>Biological Sciences</x:String>
+                    <x:String>Chemical Engineering</x:String>
+                    <x:String>Chemistry</x:String>
+                    <x:String>Computer and Information Sciences</x:String>
+                    <x:String>Civil Engineering</x:String>
+                    <x:String>Economics and Development Studies</x:String>
+                    <x:String>Electrical and Information Engineering</x:String>
+                    <x:String>Estate Management</x:String>
+                    <x:String>Languages</x:String>
+                    <x:String>Mass Communication</x:String>
+                    <x:String>Mathematics</x:String>
+                    <x:String>Mechanical Engineering</x:String>
+                    <x:String>Petroleum Engineering</x:String>
+                    <x:String>Physics</x:String>
+                    <x:String>Political Science and International Relations</x:String>
+                    <x:String>Psychology</x:String>
+                    <x:String>Sociology</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+
+        </Picker>
+        <Picker x:Name="picker2" Title="Select Semester" TitleColor="Gray">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Semester 1</x:String>
+                    <x:String>Semester 2</x:String>
+                    <x:String>Semester 3</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+
+        </Picker>
+
+        <Picker x:Name="picker3" Title="Academic Session" TitleColor="Gray">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>2020/2021</x:String>
+                    <x:String>2019/2020</x:String>
+                    <x:String>2018/2019</x:String>
+                    <x:String>2017/2018</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!--<Button Text="Submit" Clicked="Button_Clicked" />-->
+        <Grid VerticalOptions="End" Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Save" Grid.Row="0" Grid.Column="0" BackgroundColor="LawnGreen" Text="Save" Clicked="SaveBtn_Clicked" />
+            <Button x:Name="Preview" Grid.Row="0" Grid.Column="1" Text="Preview" BackgroundColor="OrangeRed" Clicked="Preview_Clicked" />
+        </Grid>
+
+    </StackLayout>
+</ContentPage>
